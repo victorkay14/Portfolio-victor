@@ -1,0 +1,53 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Shape -->
+    <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00f7ff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ff00f7;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Main V Shape -->
+    <path d="M 40 40 L 100 140 L 160 40" 
+          stroke="url(#logoGradient)" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round">
+        <animate attributeName="stroke-dasharray" 
+                 from="0,1000" to="1000,0" 
+                 dur="2s" 
+                 begin="0s" 
+                 fill="freeze" />
+    </path>
+    
+    <!-- K Shape -->
+    <path d="M 80 60 L 120 100 L 160 60 M 120 100 L 160 140" 
+          stroke="url(#logoGradient)" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round">
+        <animate attributeName="stroke-dasharray" 
+                 from="0,1000" to="1000,0" 
+                 dur="2s" 
+                 begin="0.5s" 
+                 fill="freeze" />
+    </path>
+    
+    <!-- Glowing Effect -->
+    <circle cx="100" cy="100" r="80" 
+            stroke="url(#logoGradient)" 
+            stroke-width="2" 
+            fill="none" 
+            opacity="0.5">
+        <animate attributeName="r" 
+                 values="80;85;80" 
+                 dur="2s" 
+                 repeatCount="indefinite" />
+        <animate attributeName="opacity" 
+                 values="0.5;0.2;0.5" 
+                 dur="2s" 
+                 repeatCount="indefinite" />
+    </circle>
+</svg>
